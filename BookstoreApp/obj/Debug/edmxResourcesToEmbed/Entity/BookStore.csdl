@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookstoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BookstoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_BookStore" EntityType="BookstoreModel.Tbl_BookStore" />
+  </EntityContainer>
+  <EntityType Name="Tbl_BookStore">
+    <Key>
+      <PropertyRef Name="BookId" />
+    </Key>
+    <Property Name="BookId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="AuthorName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BookPublication" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BookDate" Type="DateTime" Precision="0" />
+    <Property Name="BookISBN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BookDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BookPrice" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BookPic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

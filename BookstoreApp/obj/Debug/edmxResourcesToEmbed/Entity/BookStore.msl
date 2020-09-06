@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BookstoreModelStoreContainer" CdmEntityContainer="BookstoreEntities">
+    <EntitySetMapping Name="Tbl_BookStore">
+      <EntityTypeMapping TypeName="BookstoreModel.Tbl_BookStore">
+        <MappingFragment StoreEntitySet="Tbl_BookStore">
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="BookPic" ColumnName="BookPic" />
+          <ScalarProperty Name="BookPrice" ColumnName="BookPrice" />
+          <ScalarProperty Name="BookDescription" ColumnName="BookDescription" />
+          <ScalarProperty Name="BookISBN" ColumnName="BookISBN" />
+          <ScalarProperty Name="BookDate" ColumnName="BookDate" />
+          <ScalarProperty Name="BookPublication" ColumnName="BookPublication" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,46 @@
+﻿@model BookstoreApp.Models.BookListModel
+    @{ 
+        Layout = null;
+    }
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.Label("Book Name :", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Model.BookName
+            </div>
+            <label class="control-label col-md-2">Author Name : </label>
+            <div class="col-md-4">
+                @Model.AuthorName
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Publication :", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Model.BookPublication
+            </div>
+            <label class="control-label col-md-2">Book Price : </label>
+            <div class="col-md-4">
+                @Model.BookPrice
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Book Date :", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Model.BookDate.Value.ToString("dd-MM-yyyy")
+            </div>
+            <label class="control-label col-md-2">ISBN : </label>
+            <div class="col-md-4">
+                @Model.BookISBN
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Description :", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Model.BookDescription
+            </div>
+            <label class="control-label col-md-2">Book Picture : </label>
+            <div class="col-md-4">
+                <img style="width: 120px; height: 120px;" src="@Model.BookPic" />
+            </div>
+        </div>
+    </div>

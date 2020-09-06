@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Book";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<link href="~/Content/jsgrid/css/jsgrid.min.css" rel="stylesheet" />
+<link href="~/Content/jsgrid/css/jsgrid-theme.min.css" rel="stylesheet" />
+<link href="~/Content/responsivecss.css" rel="stylesheet" />
+<div class="container-fluid mobile-space">
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <span><a href="@Url.Action("AddBook","BookStore")" title="Add Book"><i class="fa fa-plus" style="color:white;font-size: 25px;"></i></a> <h3 class="panel-title" style="margin-left: 40px; margin-top: -20px;">Book List</h3></span>
+            </div>
+            <br />
+            <div id="GetBookList">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="myModalForDisplayBookDetails">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="display: inherit; border-radius:5px 5px 0px 0px;background: #7fc3eb;" >
+                <h5 class="modal-title">Book Detail</h5>
+                <button type="button" class="close" data-dismiss="modal" style="margin-top: -20px;">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin-left: 1px;">
+                <div class="card-body">
+                    <div id="DisplayData"></div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <button type="button" class="btn btn-primary pull-right" style="border-radius: 100px;margin-top: -34px;width: 150px;background-image: linear-gradient(to left, #3cffdb, #425fe0);" id="closeStatus" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Content/jsgrid/js/jsgrid.min.js"></script>
+<script src="~/Scripts/BookListGrid.js"></script>

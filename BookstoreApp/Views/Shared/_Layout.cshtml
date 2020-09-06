@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/LayoutCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="throbber" style="display:none; min-height:120px;"></div>
+    <div id="noty-holder"></div>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("GetBookList","BookStore")">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                </a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li>
+                    <img src="~/Content/Image/pp.jpg" style="width: 60px; border-radius: 50px;" />
+                    @*<a href="#" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats">
+                            <i class="fa fa-bar-chart-o"></i>
+                        </a>*@
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ashwajit Bansod<b class="fa fa-angle-down"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="@Url.Action("AddBook","BookStore")"><i class="fa fa-fw fa-plus"></i> Add Book </a>
+
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetBookList","BookStore")"><i class="fa fa-fw fa-list"></i>  Book List</a>
+
+                    </li>
+                    <li>
+                        <a href="investigaciones/favoritas"><i class="fa fa-fw fa-area-chart"></i>  Reports</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                @RenderBody()
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div><!-- /#wrapper -->
+   
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/LayoutJs.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
